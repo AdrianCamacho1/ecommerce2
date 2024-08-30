@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 export const ProductCard = ({product}) => {
     const {cartList, addToCart, removeFromCart } = useCart();
     const [inCart, setInCart]= useState(false)
-    const {id, name, overview, poster, price, rating, best_seller, item} = product;
+    const {id, name, overview, poster, price, rating, best_seller} = product;
 
     useEffect(()=> {
         const productInCart = cartList.find(item => item.id === product.id);
